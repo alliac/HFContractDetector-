@@ -1,0 +1,75 @@
+---------------------------Static Analysis---------------------------
+错误使用math/rand,随机数生成漏洞
+错误使用time,系统时间戳漏洞
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+存在全局变量漏洞：[OBJECTTYPE_JSON]
+存在全局变量漏洞：[OBJECTTYPE_VEHICLE]
+存在全局变量漏洞：[OBJECTTYPE_LEASE]
+存在全局变量漏洞：[PRIVATE_COLLECTION_LEASE]
+结构体中不建议声明变量（字段声明漏洞）ObjectType
+结构体中不建议声明变量（字段声明漏洞）CreateTime
+结构体中不建议声明变量（字段声明漏洞）Id
+结构体中不建议声明变量（字段声明漏洞）Brand
+结构体中不建议声明变量（字段声明漏洞）Price
+结构体中不建议声明变量（字段声明漏洞）OwnerId
+结构体中不建议声明变量（字段声明漏洞）Status
+结构体中不建议声明变量（字段声明漏洞）UserId
+结构体中不建议声明变量（字段声明漏洞）VehicleId
+结构体中不建议声明变量（字段声明漏洞）BeginTime
+结构体中不建议声明变量（字段声明漏洞）EndTime
+存在全局变量漏洞：[FUNCMAP]
+存在映射结构迭代：[FUNCMAP]
+建议不使用内置函数len
+未使用的隐私数据机制:建议使用EMP-toolkit对上链数据进行加密
+建议不使用内置函数new
+存在范围查询风险：GetQueryResult
+建议不使用内置函数append
+存在范围查询风险：GetHistoryForKey
+存在映射结构迭代：[id]
+未处理的错误： defer stateIterator.Close()
+未处理的错误： defer historyIterator.Close()
+未使用crypto,未加密的敏感数据
+未初始化存储指针: res 未初始化
+未初始化存储指针: jByte 未初始化
+未初始化存储指针: j 未初始化
+未初始化存储指针: v 未初始化
+未初始化存储指针: price 未初始化
+---------------------------Dynamic Analysis---------------------------
+wronglyTxRandValue函数未检查输入参数
+注释标题不足以检查实现和使用情况:init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:createVehicle函数未添加注释说明
+注释标题不足以检查实现和使用情况:addVehicle函数未添加注释说明
+注释标题不足以检查实现和使用情况:findVehicle函数未添加注释说明
+注释标题不足以检查实现和使用情况:deleteVehicle函数未添加注释说明
+注释标题不足以检查实现和使用情况:updateVehiclePrice函数未添加注释说明
+注释标题不足以检查实现和使用情况:updateVehicleDynPrice函数未添加注释说明
+注释标题不足以检查实现和使用情况:wronglyTxRandValue函数未添加注释说明
+注释标题不足以检查实现和使用情况:queryVehiclesByBrand函数未添加注释说明
+注释标题不足以检查实现和使用情况:queryVehicles函数未添加注释说明
+注释标题不足以检查实现和使用情况:joinKVList函数未添加注释说明
+注释标题不足以检查实现和使用情况:getVehicleHistory函数未添加注释说明
+注释标题不足以检查实现和使用情况:joinKMList函数未添加注释说明
+注释标题不足以检查实现和使用情况:createLease函数未添加注释说明
+注释标题不足以检查实现和使用情况:addLease函数未添加注释说明
+注释标题不足以检查实现和使用情况:findLease函数未添加注释说明
+---------------------------Test Result---------------------------
+Static cost: 12.889444802s,Dynamic cost: 846.787089ms,Total cost: 13.736231891s
+内置函数(3)
+字段声明漏洞(11)
+映射结构迭代(2)
+未初始化存储指针(5)
+全局变量漏洞(5)
+未使用的隐私数据机制(1)
+范围查询风险(2)
+外部库调用漏洞(2)
+随机数生成漏洞(1)
+系统时间戳漏洞(1)
+未处理的错误(2)
+未加密的敏感数据(1)
+函数未检查输入参数(1)
+注释标题不足以检查实现和使用情况(18)
+14种漏洞类型，55个漏洞
+

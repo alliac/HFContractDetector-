@@ -1,0 +1,34 @@
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+结构体中不建议声明变量（字段声明漏洞）PatientName
+结构体中不建议声明变量（字段声明漏洞）PatientGender
+结构体中不建议声明变量（字段声明漏洞）PatientAge
+结构体中不建议声明变量（字段声明漏洞）PatientNationality
+结构体中不建议声明变量（字段声明漏洞）PatientIDType
+结构体中不建议声明变量（字段声明漏洞）PatientIDNumber
+结构体中不建议声明变量（字段声明漏洞）PatientTelephone
+结构体中不建议声明变量（字段声明漏洞）PatientAddress
+结构体中不建议声明变量（字段声明漏洞）DoctorName
+结构体中不建议声明变量（字段声明漏洞）DoctorID
+结构体中不建议声明变量（字段声明漏洞）DoctorHospitalName
+结构体中不建议声明变量（字段声明漏洞）DoctorHosptialID
+结构体中不建议声明变量（字段声明漏洞）MRID
+结构体中不建议声明变量（字段声明漏洞）MRAdmissionDate
+结构体中不建议声明变量（字段声明漏洞）MRDischargeDate
+结构体中不建议声明变量（字段声明漏洞）MRPaymentType
+结构体中不建议声明变量（字段声明漏洞）MRPatientID
+结构体中不建议声明变量（字段声明漏洞）MRDoctors
+结构体中不建议声明变量（字段声明漏洞）MRDiagnosis
+建议不使用内置函数len
+未使用的隐私数据机制:建议使用EMP-toolkit对上链数据进行加密
+存在范围查询风险：GetHistoryForKey
+未初始化存储指针: newRecord 未初始化
+建议不使用内置函数new
+未处理的错误： defer resultsIterator.Close()
+未处理的错误： json.Unmarshal(response.Value, &_medicalRecord)
+未使用crypto,未加密的敏感数据
+未初始化存储指针: _medicalRecord 未初始化
+注释标题不足以检查实现和使用情况:Init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:AddNewMR函数未添加注释说明
+注释标题不足以检查实现和使用情况:GetMRByID函数未添加注释说明

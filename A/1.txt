@@ -1,0 +1,62 @@
+---------------------------Static Analysis---------------------------
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+结构体中不建议声明变量（字段声明漏洞）FoodID
+结构体中不建议声明变量（字段声明漏洞）FoodProInfo
+结构体中不建议声明变量（字段声明漏洞）FoodIngInfo
+结构体中不建议声明变量（字段声明漏洞）FoodLogInfo
+结构体中不建议声明变量（字段声明漏洞）FoodName
+结构体中不建议声明变量（字段声明漏洞）FoodSpec
+结构体中不建议声明变量（字段声明漏洞）FoodMFGDate
+结构体中不建议声明变量（字段声明漏洞）FoodEXPDate
+结构体中不建议声明变量（字段声明漏洞）FoodLOT
+结构体中不建议声明变量（字段声明漏洞）FoodQSID
+结构体中不建议声明变量（字段声明漏洞）FoodMFRSName
+结构体中不建议声明变量（字段声明漏洞）FoodProPrice
+结构体中不建议声明变量（字段声明漏洞）FoodProPlace
+结构体中不建议声明变量（字段声明漏洞）IngID
+结构体中不建议声明变量（字段声明漏洞）IngName
+结构体中不建议声明变量（字段声明漏洞）LogDepartureTm
+结构体中不建议声明变量（字段声明漏洞）LogArrivalTm
+结构体中不建议声明变量（字段声明漏洞）LogMission
+结构体中不建议声明变量（字段声明漏洞）LogDeparturePl
+结构体中不建议声明变量（字段声明漏洞）LogDest
+结构体中不建议声明变量（字段声明漏洞）LogToSeller
+结构体中不建议声明变量（字段声明漏洞）LogStorageTm
+结构体中不建议声明变量（字段声明漏洞）LogMOT
+结构体中不建议声明变量（字段声明漏洞）LogCopName
+结构体中不建议声明变量（字段声明漏洞）LogCost
+建议不使用内置函数len
+未使用的隐私数据机制:建议使用EMP-toolkit对上链数据进行加密
+建议不使用内置函数append
+存在范围查询风险：GetHistoryForKey
+建议不使用内置函数new
+未处理的错误： defer resultsIterator.Close()
+未处理的错误： json.Unmarshal(response.Value,&FoodInfos)
+未使用crypto,未加密的敏感数据
+未初始化存储指针: FoodInfos 未初始化
+未初始化存储指针: IngInfoitem 未初始化
+未初始化存储指针: foodAllinfo 未初始化
+---------------------------Dynamic Analysis---------------------------
+注释标题不足以检查实现和使用情况:Init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:addProInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:addIngInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:addLogInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:getFoodInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:getProInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:getIngInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:getLogInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:getLogInfo_l函数未添加注释说明
+---------------------------Test Result---------------------------
+Static cost: 11.147247471s,Dynamic cost: 8.449864142s,Total cost: 19.597111613s
+内置函数(3)
+字段声明漏洞(25)
+未初始化存储指针(3)
+未使用的隐私数据机制(1)
+范围查询风险(1)
+外部库调用漏洞(2)
+未处理的错误(2)
+未加密的敏感数据(1)
+注释标题不足以检查实现和使用情况(10)
+9种漏洞类型，48个漏洞

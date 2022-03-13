@@ -1,0 +1,45 @@
+---------------------------Static Analysis---------------------------
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+存在全局变量漏洞：[ERROR_UNKNOWN_FUNC]
+存在全局变量漏洞：[ERROR_WRONG_ARGS]
+存在全局变量漏洞：[ERROR_SYSTEM]
+存在全局变量漏洞：[ERR_NOT_FOUND]
+存在全局变量漏洞：[ERROR_PUT_STATE]
+存在全局变量漏洞：[namespace]
+结构体中不建议声明变量（字段声明漏洞）CustomId
+结构体中不建议声明变量（字段声明漏洞）CustomName
+结构体中不建议声明变量（字段声明漏洞）SavingsBalance
+结构体中不建议声明变量（字段声明漏洞）CheckingBalance
+建议不使用内置函数len
+建议不使用内置函数new
+未使用的隐私数据机制:建议使用EMP-toolkit对上链数据进行加密
+---------------------------Dynamic Analysis---------------------------
+Query函数未检查输入参数
+Query函数未检查输入参数
+注释标题不足以检查实现和使用情况:Init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:CreateAccount函数未添加注释说明
+注释标题不足以检查实现和使用情况:DepositChecking函数未添加注释说明
+注释标题不足以检查实现和使用情况:WriteCheck函数未添加注释说明
+注释标题不足以检查实现和使用情况:TransactSavings函数未添加注释说明
+注释标题不足以检查实现和使用情况:SendPayment函数未添加注释说明
+注释标题不足以检查实现和使用情况:Amalgamate函数未添加注释说明
+注释标题不足以检查实现和使用情况:Query函数未添加注释说明
+注释标题不足以检查实现和使用情况:errormsg函数未添加注释说明
+注释标题不足以检查实现和使用情况:systemerror函数未添加注释说明
+注释标题不足以检查实现和使用情况:hexdigest函数未添加注释说明
+注释标题不足以检查实现和使用情况:accountKey函数未添加注释说明
+注释标题不足以检查实现和使用情况:loadAccount函数未添加注释说明
+注释标题不足以检查实现和使用情况:saveAccount函数未添加注释说明
+---------------------------Test Result---------------------------
+Static cost: 7.448475898s,Dynamic cost: 718.421902ms,Total cost: 8.1668978s
+内置函数(2)
+字段声明漏洞(4)
+全局变量漏洞(6)
+未使用的隐私数据机制(1)
+外部库调用漏洞(2)
+函数未检查输入参数(1)
+注释标题不足以检查实现和使用情况(15)
+7种漏洞类型，31个漏洞
+

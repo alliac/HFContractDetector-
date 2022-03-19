@@ -1,0 +1,41 @@
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+结构体中不建议声明变量（字段声明漏洞）Id
+结构体中不建议声明变量（字段声明漏洞）Name
+结构体中不建议声明变量（字段声明漏洞）Location
+结构体中不建议声明变量（字段声明漏洞）Content
+结构体中不建议声明变量（字段声明漏洞）WeightInKgs
+结构体中不建议声明变量（字段声明漏洞）SellerId
+结构体中不建议声明变量（字段声明漏洞）LogisticsProviderId
+结构体中不建议声明变量（字段声明漏洞）BuyerId
+结构体中不建议声明变量（字段声明漏洞）TemperatureReadings
+结构体中不建议声明变量（字段声明漏洞）Status
+存在全局变量漏洞：[logisticsProviderStore]
+存在全局变量漏洞：[shipmentStore]
+存在全局变量漏洞：[sellerStore]
+存在全局变量漏洞：[buyerStore]
+存在映射结构迭代：[buyerStore]
+存在映射结构迭代：[sellerStore]
+存在映射结构迭代：[logisticsProviderStore]
+存在映射结构迭代：[shipmentStore]
+建议不使用内置函数len
+建议不使用内置函数new
+建议不使用内置函数make
+未使用的隐私数据机制:建议使用EMP-toolkit对上链数据进行加密
+存在写后读漏洞: sellerstore
+存在写后读漏洞: buyerstore
+存在写后读漏洞: logisticsproviderstore
+存在写后读漏洞: shipmentstore
+未使用crypto,未加密的敏感数据
+注释标题不足以检查实现和使用情况:Init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:registerSeller函数未添加注释说明
+注释标题不足以检查实现和使用情况:registerBuyer函数未添加注释说明
+注释标题不足以检查实现和使用情况:registerLogisticsProvider函数未添加注释说明
+注释标题不足以检查实现和使用情况:getSeller函数未添加注释说明
+注释标题不足以检查实现和使用情况:getBuyer函数未添加注释说明
+注释标题不足以检查实现和使用情况:getLogisticsProvider函数未添加注释说明
+注释标题不足以检查实现和使用情况:registerShipment函数未添加注释说明
+注释标题不足以检查实现和使用情况:getShipments函数未添加注释说明
+注释标题不足以检查实现和使用情况:updateShipmentTemperature函数未添加注释说明
+注释标题不足以检查实现和使用情况:updateShipmentStatus函数未添加注释说明

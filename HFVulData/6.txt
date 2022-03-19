@@ -1,0 +1,30 @@
+错误使用time,系统时间戳漏洞
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+结构体中不建议声明变量（字段声明漏洞）ObjectType
+结构体中不建议声明变量（字段声明漏洞）Name
+结构体中不建议声明变量（字段声明漏洞）Color
+结构体中不建议声明变量（字段声明漏洞）Size
+结构体中不建议声明变量（字段声明漏洞）Owner
+建议不使用内置函数new
+建议不使用内置函数len
+存在范围查询风险：GetQueryResult
+存在范围查询风险：GetHistoryForKey
+未处理的错误： stub.PutState(colorNameIndexKey, value)
+未处理的错误： defer resultsIterator.Close()
+未处理的错误： defer coloredMarbleResultsIterator.Close()
+未使用crypto,未加密的敏感数据
+未使用的隐私数据机制:建议使用EMP-toolkit对上链数据进行加密
+未初始化存储指针: marbleJSON 未初始化
+注释标题不足以检查实现和使用情况:Init函数未添加注释说明
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:initMarble函数未添加注释说明
+注释标题不足以检查实现和使用情况:readMarble函数未添加注释说明
+注释标题不足以检查实现和使用情况:delete函数未添加注释说明
+注释标题不足以检查实现和使用情况:transferMarble函数未添加注释说明
+注释标题不足以检查实现和使用情况:getMarblesByRange函数未添加注释说明
+注释标题不足以检查实现和使用情况:transferMarblesBasedOnColor函数未添加注释说明
+注释标题不足以检查实现和使用情况:queryMarblesByOwner函数未添加注释说明
+注释标题不足以检查实现和使用情况:queryMarbles函数未添加注释说明
+注释标题不足以检查实现和使用情况:getQueryResultForQueryString函数未添加注释说明
+注释标题不足以检查实现和使用情况:getHistoryForMarble函数未添加注释说明

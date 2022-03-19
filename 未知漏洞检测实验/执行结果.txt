@@ -1,0 +1,118 @@
+GOROOT=/usr/local/go #gosetup
+GOPATH=/opt/gopath #gosetup
+/usr/local/go/bin/go build -o /tmp/___go_build_HFContractDetect HFContractDetect #gosetup
+/tmp/___go_build_HFContractDetect
+----执行第0个语料----
+原始语料:{"Init": {"": ""},"Test1": {"0": "gy"},"Test2": {"0": "abc","1": "abc",": "abc"} } 
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"D\ufffd\ufffd\ufffd"},"Test1":{"arg1":"  y"},"Test2":{"arg1":"a`c","arg2":"\u0019h\u0013\ufffd\ufffdabb c","arg3":"a\u0000000"}}
+----执行第1个语料----
+原始语料:{"Init": {"": ""},"Test1": {"0": "iz","1": "abc","2": "abc"},"Test2": {": "abc"} } 
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"\u001b\ufffd\ufffd"},"Test1":{"arg1":"zi","arg2":"a|","arg3":"abh"},"Test2":{"arg1":" "}}
+----执行第2个语料----
+原始语料:{"Init": {"": ""},"Test1": {"0": "10"},"Test2": {"0": "abc", "1": "abc",": "abc"}} 
+*执行链码*
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+Init called
+*语料变异*
+变异结果:{"Init":{"arg1":"\ufffd\ufffd\u0000"},"Test1":{"arg1":"11"},"Test2":{"arg1":"acb","arg2":"\u0010\u0000\u0010\u0000c","arg3":"\ufffdbc"}}
+----执行第3个语料----
+原始语料:{"Init": {"": ""},"Test1":{"0": "10","1": "abc","2": "abc"},"Test2": {": "abc"} } 
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"\ufffd\ufffd\u000c9"},"Test1":{"arg1":"dbbc","arg2":"bcc","arg3":"BB"},"Test2":{"arg1":"aab"}}
+----执行第4个语料----
+原始语料:{"Init":{"arg1":"D\ufffd\ufffd\ufffd"},"Test1":{"arg1":"  y"},"Test2":{"arg1":"a`c","arg2":"\u0019h\u0013\ufffd\ufffdabb c","arg3":"a\u0000000"}}
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"eDҽ"},"Test1":{"arg1":"y  y"},"Test2":{"arg1":"ah@cY","arg2":"\ufffd\u0000\u0013﮽�abb c","arg3":"|{\u0000"}}
+----执行第5个语料----
+原始语料:{"Init":{"arg1":"\u001b\ufffd\ufffd"},"Test1":{"arg1":"zi","arg2":"a|","arg3":"abh"},"Test2":{"arg1":" "}}
+*执行链码*
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+Init called
+*语料变异*
+变异结果:{"Init":{"arg1":"\ufffd�\ufffd\ufffd\u001b"},"Test1":{"arg1":"ach","arg2":"ziS\ufffd\ufffd","arg3":"\u0000|\u0006"},"Test2":{"arg1":"="}}
+----执行第6个语料----
+原始语料:{"Init":{"arg1":"\ufffd\ufffd\u0000"},"Test1":{"arg1":"11"},"Test2":{"arg1":"acb","arg2":"\u0010\u0000\u0010\u0000c","arg3":"\ufffdbc"}}
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"\ufffd\u0000\u0000\ufffd\ufffd\ufffd"},"Test1":{"arg1":"1111"},"Test2":{"arg1":"aBb","arg2":"\u0010\u0000\u0000\u0000c","":"\ufffd'\ufffd\ufffd\ufffd\\\ufffd\ufffd4\ufffdVc"}}
+----执行第7个语料----
+原始语料:{"Init":{"arg1":"\ufffd\ufffd\u000c9"},"Test1":{"arg1":"dbbc","arg2":"bcc","arg3":"BB"},"Test2":{"arg1":"aab"}}
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"�\ufffdբ77"},"Test1":{"arg1":"qb@c","arg2":"ck\ufffdck","arg3":"\u0001B"},"Test2":{"arg1":"aa"}}
+----执行第8个语料----
+原始语料:{"Init":{"arg1":"eDҽ"},"Test1":{"arg1":"y  y"},"Test2":{"arg1":"ah@cY","arg2":"\ufffd\u0000\u0013﮽�abb c","arg3":"|{\u0000"}}
+*执行链码*
+Init called
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+*语料变异*
+变异结果:{"Init":{"arg1":"eD\ufffd\u0000"},"Test1":{"arg1":"y  \ufffd"},"Test2":{"arg1":"|\ufffd\ufffd","arg2":"ah`JY","arg3":"�b\u0013﮽�ab\u0000 c"}}
+----执行第9个语料----
+原始语料:{"Init":{"arg1":"\ufffd�\ufffd\ufffd\u001b"},"Test1":{"arg1":"ach","arg2":"ziS\ufffd\ufffd","arg3":"\u0000|\u0006"},"Test2":{"arg1":"="}}
+*执行链码*
+Invoke called
+Test2 called
+Init called
+Invoke called
+Test1 called
+*语料变异*
+变异结果:{"Init":{"arg1":"����\ufffd\ufffd\u0014\u003c\ufffd\u0018\ufffd\u001b"},"Test1":{"arg1":"h\u0006","arg2":"ziS�ｽ","arg3":"\u0008\u0000\u0006Test2":{"arg1":"\u0018"}}
+----执行第10个语料----
+原始语料:{"Init":{"arg1":"\ufffd\u0000\u0000\ufffd\ufffd\ufffd"},"Test1":{"arg1":"1111"},"Test2":{"arg1":"aBb","arg2":"\u0010\u0000\u0000\u0000c","":"\ufffd'\ufffd\ufffd\ufffd\\\ufffd\ufffd4\ufffdVc"}}
+*执行链码*
+Invoke called
+Test1 called
+Invoke called
+Test2 called
+Init called
+*语料变异*
+变异结果:{"Init":{"arg1":"�\u0000\u0008\ufffd\ufffdｿ\ufffd�"},"Test1":{"arg1":"362"},"Test2":{"arg1":"\u0010\u0000\u0000\u0000g","arg2":"�'��\ufffdffd\\��4�Vc","arg3":"aB"}}
+filepath.Walk() returned EOF
+Detected
+
+Process finished with exit code 0

@@ -2,7 +2,7 @@
 
 A：HFContractDetector检测结果
 
-B：链码漏洞数据集
+B：链码漏洞数据集HFVulData
 
 C：HFContractDetector误报情况
 

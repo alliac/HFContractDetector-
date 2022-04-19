@@ -1,0 +1,65 @@
+---------------------------Static Analysis---------------------------
+调用了外部库github.com/emp-toolkit/jialanli/lacia/utils,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/core/chaincode/shim,外部库调用漏洞
+调用了外部库github.com/hyperledger/fabric/protos/peer,外部库调用漏洞
+错误使用net/http,Web服务漏洞
+错误使用os,外部文件访问
+错误使用os/exec,系统命令执行漏洞
+结构体中不建议声明变量（字段声明漏洞）FoodID
+结构体中不建议声明变量（字段声明漏洞）FoodProInfo
+结构体中不建议声明变量（字段声明漏洞）FoodName
+结构体中不建议声明变量（字段声明漏洞）FoodSpec
+结构体中不建议声明变量（字段声明漏洞）FoodMFGDate
+结构体中不建议声明变量（字段声明漏洞）FoodEXPDate
+结构体中不建议声明变量（字段声明漏洞）FoodLOT
+结构体中不建议声明变量（字段声明漏洞）FoodQSID
+结构体中不建议声明变量（字段声明漏洞）FoodMFRSName
+结构体中不建议声明变量（字段声明漏洞）FoodProPrice
+结构体中不建议声明变量（字段声明漏洞）FoodProPlace
+结构体中不建议声明变量（字段声明漏洞）test
+结构体中不建议声明变量（字段声明漏洞）testA
+结构体中不建议声明变量（字段声明漏洞）testB
+不建议使用goroutine，易造成程序并发性漏洞
+存在写后读漏洞: key
+使用InvokeChaincode调用channel通道链码,可能存在隐私数据安全风险
+存在映射结构迭代：[UnInitMap]
+不建议使用channel，易造成程序并发性漏洞
+建议不使用内置函数close
+未处理的错误：	go stub.PutState("key", []byte("1"))
+未处理的错误：	stub.GetState("key")
+未处理的错误：	defer response.Body.Close()
+未使用crypto,未加密的敏感数据
+未初始化存储指针: UnInitStr 未初始化
+未初始化存储指针: err 未初始化
+未初始化存储指针: FoodInfos 未初始化
+未初始化存储指针: UnInitMap 未初始化
+未初始化存储指针: UnInitArr 未初始化
+使用继承的函数和变量漏洞:TestC结构体多重继承TestA和TestB,且超级类具有相同名称的方法或变量Set{FuncTest, test}
+---------------------------Dynamic Analysis---------------------------
+GetProInfo函数未检查输入参数
+注释标题不足以检查实现和使用情况:Invoke函数未添加注释说明
+注释标题不足以检查实现和使用情况:AddProInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:GetProInfo函数未添加注释说明
+注释标题不足以检查实现和使用情况:MutiClose函数未添加注释说明
+无限循环漏洞
+---------------------------Test Result---------------------------
+Static cost: 6.457880372s,Dynamic cost: 10.418109494s,Total cost: 16.875989866s
+内置函数(1)
+字段声明漏洞(14)
+多重继承(1)
+程序并发性漏洞(2)
+映射结构迭代(1)
+未初始化存储指针(5)
+写后读漏洞(1)
+隐私数据安全风险(1)
+系统命令执行漏洞(1)
+外部库调用漏洞(3)
+Web服务漏洞(1)
+外部文件访问(1)
+未处理的错误(3)
+未加密的敏感数据(1)
+函数未检查输入参数(1)
+注释标题不足以检查实现和使用情况(4)
+无限循环漏洞(1)
+17种漏洞类型，42个漏洞
+

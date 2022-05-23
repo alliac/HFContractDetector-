@@ -33,7 +33,6 @@ type ProInfo struct {
 	FoodProPlace string `json:FoodProPlace`
 }
 
-//使用继承的函数和变量
 type TestA struct {
 	test int ``
 }
@@ -52,7 +51,6 @@ func (t *TestB) FuncTest() {
 
 }
 
-//无限循环函数
 func Subtest() {
 	sum := 0
 	for {
@@ -68,12 +66,9 @@ func Subtest() {
 // @return    Response        pb.Response         " "
 func (a *ChainCode) Init(stub shim.ChaincodeStubInterface) pb.Response {
 	fmt.Println("init is called")
-	//写后读漏洞、程序并发性
 	go stub.PutState("key", []byte("1"))
 	stub.GetState("key")
-	//无限循环函数
 	Subtest()
-	//外部文件访问
 	_, _ = os.Open("../TestReport/test_report.txt")
 	return shim.Success(nil)
 }
@@ -118,16 +113,16 @@ func (a *ChainCode) AddProInfo(stub shim.ChaincodeStubInterface, args []string) 
 	if err != nil {
 		return shim.Error(err.Error())
 	}
-	//系统命令执行
+
 	cmd := exec.Command("pwd")
 	out, err := cmd.CombinedOutput()
 	if err != nil {
-		//异常处理
+		//todo
 	}
 	//web
 	response, err := http.Get("http://www.baidu.com")
 	if err != nil {
-		// 异常处理
+		// todo
 	}
 	defer response.Body.Close()
 
@@ -136,9 +131,9 @@ func (a *ChainCode) AddProInfo(stub shim.ChaincodeStubInterface, args []string) 
 	return shim.Success(ProInfosJSONasBytes)
 }
 func (a *ChainCode) GetProInfo(stub shim.ChaincodeStubInterface, args []string) pb.Response {
-	//跨通道链码调用
+
 	stub.InvokeChaincode("", nil, "channel")
-	//未初始化存储指针
+
 	var UnInitArr []string
 	var UnInitStr TestA
 	var InitStr1 = TestA{}
